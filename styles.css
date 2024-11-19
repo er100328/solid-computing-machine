@@ -1,0 +1,239 @@
+body
+{
+    min-height: -50%vh;
+}
+.container
+{
+    position: relative;
+    width:100%;
+    height: 100vh;
+}
+.bolhas
+{
+   position:absolute;
+   display:flex;
+}
+.bolhas span
+{
+    
+    width:30px;
+    height:30px;
+    background:rgb(250, 12, 12);
+    margin: 0 4px;
+    border-radius:50%;
+    box-shadow: 0 0 0 10px rgba(132, 14, 14, 0.527),
+    0 0 50px red,
+    0 0 100px rgb(132, 14, 14, 0.527);
+    animation:animar calc(500s/var(--1)) linear infinite;
+}
+@keyframes animar
+{
+    0%{
+      transform: translateY(300vh) scale(0);
+    }
+    100%{
+        transform: translateY(-100vh) scale(1);
+    }
+}
+.bolhas span:nth-of-type(even)
+{
+    background: rgb(5, 56, 150);
+    box-shadow: 0 0 0 10px rgba(5, 60, 61, 0.623),
+    0 0 50px rgb(3, 42, 128),
+    0 0 100px rgba(14, 79, 80, 0.637);
+}
+
+body
+{
+    color:whitesmoke;
+    background:rgb(2, 0, 13);
+    margin:0px;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    margin-bottom:50px;
+   
+}
+
+header 
+{
+    font-family: "Handjet", sans-serif;
+    border-bottom: solid 1px rgb(208, 19, 19);
+    padding: 15px;
+    font-size:32px;
+    color:rgb(211, 23, 23);
+}
+
+.chamada
+{
+     background:linear-gradient(72deg, rgb(192, 33, 102) 1%, rgb(220, 32, 18) 50%, rgb(171, 95, 44) 99%);
+     padding-top: 80px;
+     padding-bottom:80px;
+     display:flex;
+     justify-content:center;
+     
+}
+
+.chamada-texto
+{
+    margin-right:5%;
+
+}
+h1{
+    margin: 40px;
+  font-size:25px;
+}
+p{
+    margin: 40px;
+    font-size:20px;
+}
+.varios-videos 
+{
+ display: flex;
+ overflow-x: auto;
+ gap: 20px;
+ transition: .4s;
+}
+.varios-videos img:hover {
+transform: scale(1.1);
+}
+
+.categoria
+{
+    margin-top: 20px;  
+    padding-left:20px;
+    padding-right: 20px;
+}
+.varios-videos img
+{
+    opacity:0.5;
+    transition: 3s;
+    height: 200px;
+}
+.varios-videos img:hover
+{
+    opacity:1.0 ;
+    border: 2px solid white;
+    transition: 1.5s;
+}
+.categoria h2
+{
+    font-size: 30px;
+    color: floralwhite;
+}
+.ação h3
+{
+    margin: 30px;
+    font-size: 30px;
+    color: floralwhite;
+}
+.agindo img{
+    opacity:0.5;
+    transition: 3s;
+    height: 200px;
+}
+.agindo
+{
+ margin-left:20px ;
+ display: flex;
+ overflow-x: auto;
+ gap: 20px;
+ transition: .4s;
+}
+.agindo img:hover
+ {
+transform: scale(1.1);
+opacity:1.0 ;
+border: 2px solid white;
+transition: 1.5s;
+}
+
+.content{
+    height:315px;
+    width:560px;
+    border-radius:20px;
+    overflow:hidden;
+    margin-right:15px;
+}
+.navegation{
+    position:absolute;
+    margin-bottom:8%;
+    bottom:20px;
+    left:80%;
+    transform:translate(-80%);
+    display:flex;
+    
+}
+
+.bar{
+    width:40px;
+    height:10px;
+    border:2px solid white;
+    margin:6px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.4s;
+}
+.bar:hover{
+    background-color:white;
+}
+input{
+    display:none;
+}
+.slides{
+    display:flex;
+    width:500%;
+    height:100%;
+}
+.radio{
+    width:20%;
+    transition:.6s;
+}
+.radio img{
+    width:100%;
+    height:100%;
+}
+#radio1:checked~.s1{
+    margin-left: 0;
+}
+#radio2:checked~.s1{
+    margin-left: -20%;
+}
+#radio3:checked~.s1{
+    margin-left: -40%;
+}
+#radio4:checked~.s1{
+    margin-left: -60%;
+}
+#radio5:checked~.s1{
+    margin-left: -80%;
+}
+
+.banner{
+    height:100vh;
+    width:100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+
+}
+.banner .slider .iten{
+    position: absolute;
+    inset: 0 0 0 0 ;
+    transform: translateZ(550px);
+}
+.banner .slider.iten img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
